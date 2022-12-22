@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Tab</title>
+  
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,500;0,800;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Main Header -->
+  <div id="main-header-div" class="main-header-div">
+    <h1 id="main-title" class="main-title">Study Tab</h1>
+    <div id="main-header-color-div" class="main-header-color-div">
+      <div class="main-header-color-changer-div">
+        <h5 class="main-header-color-info">Background color : </h5>
+        <input id="main-header-background-color-input" type="color" value="#b5c5e6" class="main-header-color-input" onchange="updateColor()">
+      </div>
+      <div class="main-header-color-changer-div">
+        <h5 class="main-header-color-info">Main color : </h5>
+        <input id="main-header-main-color-input" type="color" value="#7597e0" class="main-header-color-input" onchange="updateColor()">
+      </div>
+      <div class="main-header-color-changer-div">
+        <h5 class="main-header-color-info">Secondary color : </h5>
+        <input id="main-header-secondary-color-input" type="color" value="#131580" class="main-header-color-input" onchange="updateColor()">
+      </div>
+      <div class="main-header-color-changer-div">
+        <h5 class="main-header-color-info">Text color : </h5>
+        <input id="main-header-text-color-input" type="color" value="#2161a3" class="main-header-color-input" onchange="updateColor()">
+      </div>
+    </div>
+    <div id="main-header-item-div" class="main-header-item-div">
+      <div class="main-header-item-single-div">
+        <h5 class="main-header-item-single-text">Stopwatch : </h5>
+        <label class="switch">
+          <input type="checkbox" id="stopwatch-switch" onchange="updateItemToggleStopwatch()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="main-header-item-single-div">
+        <h5 class="main-header-item-single-text">Notes : </h5>
+        <label class="switch">
+          <input type="checkbox" id="notes-switch" onchange="updateItemToggleNotes()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="main-header-item-single-div">
+        <h5 class="main-header-item-single-text">Clock : </h5>
+        <label class="switch">
+          <input type="checkbox" id="clock-switch" onchange="updateItemToggleClock()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="main-header-item-single-div">
+        <h5 class="main-header-item-single-text">Todo List : </h5>
+        <label class="switch">
+          <input type="checkbox" id="todo-switch" onchange="updateItemToggleTodo()">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div id="main-header-credits-div" class="main-header-credits-div">
+      <div class="main-header-credits-item-div"><a href="https://iconscout.com/icons/mouse" target="_blank">Mouse Icon</a> by <a href="https://iconscout.com/contributors/alexandru-stoica" target="_blank">Alexandru Stoica</a></div>
+      <div class="main-header-credits-item-div"><a href="https://iconscout.com/icons/cross" target="_blank">Cross Icon</a> by <a href="https://iconscout.com/contributors/feathericons" target="_blank">Feather Icons</a></div>
+    </div>
+  </div>
+
+  <!-- Text Box -->
+  <div id="text-box-div" class="text-box-div">
+    <div class="text-box-subdiv">
+      <h3 class="text-box-header">Notes</h3>
+      <img id="text-box-div-mouse" class="move-item-img" src="icons/mouse.png" alt="Move Element">
+    </div>
+    <textarea id="text-box-text" class="text-box-text"></textarea>
+  </div>
+
+  <!-- Todo List Box -->
+  <div id="todo-box-div" class="todo-box-div">
+    <div class="todo-box-subdiv">
+      <h3 class="todo-box-header">Todo List</h3>
+      <img id="todo-box-div-mouse" class="move-item-img" src="icons/mouse.png" alt="Move Element">
+    </div>
+    <div class="todo-box-subdiv">
+      <input id="todo-box-input" type="text" class="todo-box-input">
+      <button id="todo-box-input-btn" type="submit" class="todo-box-input-btn" onclick="addTodo()">Add</button>
+    </div>
+    <div id="todo-box-items-div">
+
+    </div>
+  </div>
+
+  <!-- Digital Clock -->
+  <div id="clock-box-div" class="clock-box-div">
+    <div class="clock-box-sub-div">
+      <h3 id="digital-clock"></h3>
+      <img id="clock-box-div-mouse" class="move-item-img" src="icons/mouse.png" alt="Move Element">
+    </div>
+  </div>
+
+  <!-- Stopwatch Clock -->
+  <div id="stopwatch-box-div" class="stopwatch-box-div">
+    <div class="stopwatch-box-header-div">
+      <h3 class="stopwatch-box-title">Stopwatch</h3>
+      <img id="stopwatch-box-div-mouse" class="move-item-img" src="icons/mouse.png" alt="Move Element">
+    </div>
+    <div id="stopwatch-time" class="stopwatch-box-time-div">
+        <span class="digit" id="stopwatch-hr">
+          00</span>
+        <span class="txt">Hr</span>
+        <span class="digit" id="stopwatch-min">
+          00</span>
+        <span class="txt">Min</span>
+        <span class="digit" id="stopwatch-sec">
+          00</span>
+        <span class="txt">Sec</span>
+        <span class="digit" id="stopwatch-count">
+          00</span>
+    </div>
+    <div id="stopwatch-buttons">
+        <button class="stopwatch-btn-start" id="stopwatch-btn-start">
+          Start</button>
+        <button class="stopwatch-btn-stop" id="stopwatch-btn-stop">
+          Stop</button>
+        <button class="stopwatch-btn-reset" id="stopwatch-btn-reset">
+          Reset</button>
+    </div>
+</div>
+
+  <!-- Connect Javascript File --> 
+  <script src="index.js"></script>
+
+  <!-- Credits -->
+  <!-- <a href="https://iconscout.com/icons/mouse" target="_blank">Mouse Icon</a> by <a href="https://iconscout.com/contributors/alexandru-stoica" target="_blank">Alexandru Stoica</a> -->
+  <!-- <a href="https://iconscout.com/icons/cross" target="_blank">Cross Icon</a> by <a href="https://iconscout.com/contributors/feathericons" target="_blank">Feather Icons</a> -->
+</body>
+</html>

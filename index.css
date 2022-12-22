@@ -1,0 +1,321 @@
+body{
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* Global Code */
+.move-item-img{
+  width: 20px;
+  height: 20px;
+
+  margin-left: 20px;
+}
+
+/* Main Header CSS*/
+.main-header-div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  font-family: Bebas Neue;
+}
+
+.main-title{
+  border: solid 2px;
+  border-radius: 6px;
+  
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+/* Color Section */
+.main-header-color-div{
+  border: solid 2px;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 10px;
+  margin-bottom: 6px;
+}
+
+.main-header-color-changer-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding-bottom: 10px;
+}
+
+.main-header-color-info{
+  padding-right: 12px;
+  margin: 0;
+}
+
+/* Item Toggle Section */
+.main-header-item-div{
+  border: solid 2px;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 10px;
+  margin-bottom: 6px;
+  padding-right: 80px;
+}
+
+.main-header-item-single-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-header-item-single-text{
+  margin: 0;
+  margin-right: 6px;
+}
+
+/* Credits Section */
+.main-header-credits-div{
+  border: solid 2px;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 10px;
+  margin-bottom: 6px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Text Area CSS */
+.text-box-div{
+  margin: 0;
+  padding: 10px;
+
+  border: solid 2px;
+  border-radius: 6px;
+
+  position: absolute;
+}
+
+.text-box-div:hover{
+  box-shadow: 5px 5px 5px rgb(138, 67, 49);
+}
+
+.text-box-subdiv{
+  display: flex;
+  align-items: center;
+}
+
+.text-box-text{
+  border: solid 2px;
+  border-radius: 6px;
+
+  width: 312px;
+  height: 78px;
+}
+
+/* Text Area / Todo CSS */
+.todo-box-div{
+  margin: 0;
+  padding: 10px;
+
+  border: solid 2px;
+  border-radius: 6px;
+
+  position: absolute;
+}
+
+.todo-box-div:hover{
+  box-shadow: 5px 5px 5px rgb(138, 67, 49);
+}
+
+.todo-box-subdiv{
+  display: flex;
+  align-items: center;
+}
+
+.todo-box-input{
+  border: solid 2px;
+  border-radius: 6px;
+
+  margin-right: 10px;
+}
+
+.todo-box-input-btn{
+  height: 20px;
+
+  border: solid 2px;
+  border-radius: 6px;
+}
+
+.todo-box-input-btn:hover{
+  background-color: rgb(218, 154, 129);
+}
+
+.todo-box-single-div{
+  display: flex;
+
+  border: solid 2px;
+  border-radius: 6px;
+
+  margin-top: 4px;
+  padding: 2px;
+
+  justify-content: space-between;
+
+  font-family: Bebas Neue;
+}
+
+/* Digital Clock CSS */
+.clock-box-div{
+  margin: 0;
+  padding: 10px;
+
+  border: solid 2px;
+  border-radius: 6px;
+
+  position: absolute;
+}
+
+.clock-box-div:hover{
+  box-shadow: 5px 5px 5px rgb(138, 67, 49);
+}
+
+.clock-box-sub-div{
+  display: flex;
+  align-items: center;
+}
+
+.clock-move-item-img{
+  width: 20px;
+  height: 20px;
+
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* Stopwatch CSS */
+.stopwatch-box-div{
+  margin: 0;
+  padding: 10px;
+
+  border: solid 2px;
+  border-radius: 6px;
+
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.stopwatch-box-header-div{
+  display: flex;
+  align-items: center;
+}
+
+.stopwatch-btn-start{
+  height: 20px;
+
+  border: solid 2px;
+  border-radius: 6px;
+}
+.stopwatch-btn-start{
+  background-color: rgb(218, 154, 129);
+}
+
+.stopwatch-btn-stop{
+  height: 20px;
+
+  border: solid 2px;
+  border-radius: 6px;
+}
+
+.stopwatch-btn-stop{
+  background-color: rgb(218, 154, 129);
+}
+
+.stopwatch-btn-reset{
+  height: 20px;
+
+  border: solid 2px;
+  border-radius: 6px;
+}
+
+.stopwatch-btn-reset{
+  background-color: rgb(218, 154, 129);
+}
