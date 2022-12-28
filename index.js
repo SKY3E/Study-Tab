@@ -251,7 +251,7 @@ function updateColor(){
 
 function updateTextColor(){
   // Create list with all html elements to update
-  textColorList = ["main-header-div", "text-box-div", "clock-box-div", "text-box-text", "todo-box-div", "todo-box-input", "todo-box-input-btn", "stopwatch-box-div", "stopwatch-btn-start", "stopwatch-btn-stop", "stopwatch-btn-reset", "main-header-credits-div"]
+  textColorList = ["main-header-div", "text-box-div", "clock-box-div", "text-box-text", "todo-box-div", "todo-box-input", "todo-box-input-btn", "stopwatch-box-div", "stopwatch-btn-start", "stopwatch-btn-stop", "stopwatch-btn-reset", "main-header-credits-div", "credits-text1", "credits-text2", "credits-text3", "credits-text4"]
   //Loop through list of elements and update colors
   for (let i in textColorList){
     document.getElementById(textColorList[i]).style.color = textColor;
